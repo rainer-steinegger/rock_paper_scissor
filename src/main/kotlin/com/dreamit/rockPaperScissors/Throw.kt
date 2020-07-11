@@ -11,6 +11,9 @@ enum class Throw: Challenge {
                 SCISSOR -> WIN
             }
         }
+        override fun toString(): String {
+            return "✊"
+        }
     },
     PAPER {
         override fun throwsAgainst(opponent: Throw): ThrowResult {
@@ -20,6 +23,9 @@ enum class Throw: Challenge {
                 SCISSOR -> LOSS
             }
         }
+        override fun toString(): String {
+            return "✋"
+        }
     },
     SCISSOR {
         override fun throwsAgainst(opponent: Throw): ThrowResult {
@@ -28,6 +34,9 @@ enum class Throw: Challenge {
                 PAPER -> WIN
                 SCISSOR -> TIE
             }
+        }
+        override fun toString(): String {
+            return "✌"
         }
     }
 }

@@ -9,12 +9,12 @@ class StubbornPlayerTest {
 
     @Test
     fun `has the correct default name`() {
-        assertThat(player.name()).isEqualTo("Mr. ROCK-Stubborn")
+        assertThat(player.name()).isEqualTo("Mr. ✊-Stubborn")
     }
 
     @Test
     fun `has the correct name when overriding the default throw`() {
-        assertThat(StubbornPlayer(SCISSOR).name()).isEqualTo("Mr. SCISSOR-Stubborn")
+        assertThat(StubbornPlayer(SCISSOR).name()).isEqualTo("Mr. ✌-Stubborn")
     }
 
     @Test
