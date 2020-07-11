@@ -1,6 +1,6 @@
 package com.dreamit.rockPaperScissors
 
-import com.dreamit.rockPaperScissors.Result.*
+import com.dreamit.rockPaperScissors.ThrowResult.*
 import com.dreamit.rockPaperScissors.Throw.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

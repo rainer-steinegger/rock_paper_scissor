@@ -1,6 +1,6 @@
 package com.dreamit.rockPaperScissors
 
-enum class Result {
+enum class ThrowResult {
     WIN,
     LOSS,
     TIE
