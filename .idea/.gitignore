@@ -1,0 +1,12 @@
+.DS_Store
+#intellij config
+.idea/
+*.iml
+
+# tools
+.gradle/
+.java-version
+
+# build outputs
+build/
+out/
