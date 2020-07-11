@@ -1,12 +1,11 @@
 package com.dreamit.rockPaperScissors.match
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class MatchupTest {
     companion object {
-        private const val THROWS = 100
+        private const val AMOUNT_OF_THROWS = 100
     }
 
     private val randomPlayer = RandomPlayer()
@@ -16,8 +15,8 @@ class MatchupTest {
 
     @Test
     fun `play rock paper scissors!`() {
-        repeat(THROWS) { matchup.nextRound() }
+        repeat(AMOUNT_OF_THROWS) { matchup.nextRound() }
 
-        assertThat(matchup.playerAWins + matchup.playerBWins + matchup.ties).isEqualTo(THROWS)
+        assertThat(matchup.summary.playerAWins + matchup.summary.playerBWins + matchup.summary.ties).isEqualTo(AMOUNT_OF_THROWS)
     }
 }

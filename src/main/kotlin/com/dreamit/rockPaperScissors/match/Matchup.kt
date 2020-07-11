@@ -4,19 +4,17 @@ import com.dreamit.rockPaperScissors.ThrowResult.*
 
 class Matchup(private val playerA: Player, private val playerB: Player) {
 
-    var playerAWins = 0
-    var playerBWins = 0
-    var ties = 0
+    var summary = Summary()
 
     fun nextRound() {
         val playerAThrow = playerA.nextThrow()
         val playerBThrow = playerB.nextThrow()
 
         val result = playerAThrow.throwsAgainst(playerBThrow)
-        when (result) {
-            WIN -> playerAWins++
-            LOSS -> playerBWins++
-            TIE -> ties++
+        summary = when (result) {
+            WIN -> summary.copy(playerAWins = summary.playerAWins + 1)
+            LOSS -> summary.copy(playerBWins = summary.playerBWins + 1)
+            TIE -> summary.copy(ties = summary.ties + 1)
         }
 
         println("$playerAThrow vs $playerBThrow and $result")
