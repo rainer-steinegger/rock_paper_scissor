@@ -19,4 +19,10 @@ class Matchup(private val playerA: Player, private val playerB: Player) {
 
         println("$playerAThrow vs $playerBThrow and $result")
     }
+
+    fun printSummary() {
+        println("${playerA.name()} won ${summary.playerAWins} times")
+        println("${playerB.name()} won ${summary.playerBWins} times")
+        println("there were a total of ${summary.ties} ties")
+    }
 }

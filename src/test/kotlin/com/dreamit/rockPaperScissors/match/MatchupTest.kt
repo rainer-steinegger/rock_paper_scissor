@@ -18,5 +18,6 @@ class MatchupTest {
         repeat(AMOUNT_OF_THROWS) { matchup.nextRound() }
 
         assertThat(matchup.summary.playerAWins + matchup.summary.playerBWins + matchup.summary.ties).isEqualTo(AMOUNT_OF_THROWS)
+        matchup.printSummary()
     }
 }
